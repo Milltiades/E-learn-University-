@@ -60,6 +60,7 @@ const BackgroundDiv = styled.div`
 
 const ContentDiv = styled.div`
 width: 100%;
+height: 392px;
   padding: 40px 0;
   display: flex;
   flex-direction: column;
