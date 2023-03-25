@@ -42,6 +42,7 @@ font-weight: 500;
 font-size: 16px;
 line-height: 160%;
 color: #181818;
+width: calc(100% - 88px);
 `
 
 const H2 = styled.h2`

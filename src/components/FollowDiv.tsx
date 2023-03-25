@@ -40,6 +40,7 @@ line-height: 140%;
 color: #FFFFFF;
 padding: 20px 0;
 margin-top: 16px;
+height: 60px;
   
 `
 
