@@ -1,7 +1,78 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
 export default function AboutUsComponent() {
   return (
-    <div>AboutUsComponent</div>
-  )
+    <MainDiv>
+      <Content>
+        <H2>რა არის L-earn?</H2>
+        <P>
+          L-earn ეს არის საზოგადოება, სადაც შეგიძლიათ არა მხოლოდ დახვეწოთ თქვენი
+          უნარები, არამედ მიიღოთ სერიოზული ფულადი შემოსავლები. ჩვენი პრაქტიკული
+          სწავლების ტექნიკით, თქვენ შეგიძლიათ დაეუფლოთ ბაზრის ყველაზე მოთხოვნად
+          პროფესიებს და გაეცნოთ მზარდ ინდუსტრიებს, როგორიც არის: Trading, Crypto
+          & NFT, E-Commerce, Video Editing, Copywriting და უახლესი AI
+          ინსტრუმენტები.
+          <br />
+          <br />
+          შესანიშნავი დროა საკუთარ თავში ინვესტირებისთვის არის ახლა, და არ
+          არსებობს უკეთესი გზა დასაწყებად, ვიდრე L-earn საზოგადოებაში
+          გაწევრიანება.
+          <br />
+          <br />
+          გადადგით პირველი ნაბიჯი ფინანსური ტრიუმფისკენ და ნახავთ, როგორ
+          შეგვიძლია დაგეხმაროთ თქვენი მომავლის ჩამოყალიბებაში.
+        </P>
+        <Button>შემოგვიერთდი</Button>
+      </Content>
+      <DivImg />
+    </MainDiv>
+  );
 }
+
+const DivImg = styled.div`
+  width: 100%;
+  height: 240px;
+  background-image: url("/assets/mobileroom.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 32px;
+`;
+const Button = styled.button`
+  width: 200px;
+  height: 60px;
+  background: linear-gradient(90deg, #276ef1 0%, #1bc8c8 100%);
+  border-radius: 32px;
+  border: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: #ffffff;
+  margin-top: 44px;
+`;
+
+const MainDiv = styled.div`
+  width: 100%;
+`;
+
+const Content = styled.div`
+  width: 100%;
+  padding: 80px 20px 0 20px;
+`;
+
+const H2 = styled.h2`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  color: #181818;
+`;
+
+const P = styled.p`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #181818;
+`;

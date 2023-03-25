@@ -45,6 +45,7 @@ const ImgRight = styled.img`
 const MainDiv = styled.div`
   width: 100%;
   position: relative;
+  height: 392px;
  
 `;
 

@@ -13,6 +13,7 @@ export default function HeaderComponent() {
 }
 
 const Header = styled.div`
+
   width: 100%;
   padding: 32px 20px;
   background: white;

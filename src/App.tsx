@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { createGlobalStyle } from 'styled-components';
+import AboutUsComponent from './components/AboutUsComponent';
+import CoursesComponent from './components/CoursesComponent';
 import HeaderComponent from './components/HeaderComponent';
 import ImproveComponent from './components/ImproveComponent';
 import RememberComponent from './components/RememberComponent';
@@ -13,10 +15,15 @@ function App() {
   return (
     <div className="App">
       <GlobalStyles/>
+      
       <HeaderComponent/>
       <ImproveComponent/>
       <VideoComponent/>
       <RememberComponent/>
+      <AboutUsComponent/>
+      <CoursesComponent/>
+      
+      
       
       
     </div>

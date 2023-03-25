@@ -82,6 +82,7 @@ const MainDiv = styled.div`
   flex-direction: column;
   width: 100%;
   padding: 60px 20px 64px 20px;
+ 
 `;
 
 const VideoDiv = styled.div`
