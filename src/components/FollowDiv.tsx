@@ -17,16 +17,35 @@ export default function FollowDiv() {
             ელ. ფოსტა *
             <Input type="text" placeholder="nikusha.tetruashvili@gmail.com" />
           </Label>
-          <SubmitInput type="submit" />
+          <Button>Subscribe</Button>
         </Form>
       </Content>
     </MainDiv>
   );
 }
 
-const SubmitInput = styled.input`
-    width: 100%;
-    background: #1BC8C8;
+// const SubmitInput = styled.input`
+//   width: 100%;
+//   background: #1bc8c8;
+//   border-radius: 32px;
+//   border: none;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 140%;
+//   color: #ffffff;
+//   padding: 20px 0;
+//   margin-top: 16px;
+//   height: 60px;
+// `;
+
+const Button = styled.button`
+     width: 100%;
+  background: #1bc8c8;
   border-radius: 32px;
   border: none;
   display: flex;
@@ -34,14 +53,13 @@ const SubmitInput = styled.input`
   justify-content: center;
   align-items: center;
   font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 140%;
-color: #FFFFFF;
-padding: 20px 0;
-margin-top: 16px;
-height: 60px;
-  
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: #ffffff;
+  padding: 20px 0;
+  margin-top: 16px;
+  height: 60px;
 `
 
 const Form = styled.form`
