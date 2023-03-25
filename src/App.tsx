@@ -1,10 +1,17 @@
 import { useState } from 'react'
 import { createGlobalStyle } from 'styled-components';
 import AboutUsComponent from './components/AboutUsComponent';
+import AccordeonDiv from './components/AccordeonDiv';
+import CashSlider from './components/CashSlider';
 import CoursesComponent from './components/CoursesComponent';
+import FollowDiv from './components/FollowDiv';
+import FooterComponent from './components/FooterComponent';
 import HeaderComponent from './components/HeaderComponent';
 import ImproveComponent from './components/ImproveComponent';
+import LineComponent from './components/LineComponent';
 import RememberComponent from './components/RememberComponent';
+import ReviewSlider from './components/ReviewSlidet';
+import SatisfiedComponent from './components/SatisfiedComponent';
 import VideoComponent from './components/VideoComponent';
 
 
@@ -22,6 +29,14 @@ function App() {
       <RememberComponent/>
       <AboutUsComponent/>
       <CoursesComponent/>
+      <CashSlider/>
+      <SatisfiedComponent/>
+      <ReviewSlider/>
+      <AccordeonDiv/>
+      <FollowDiv/>
+      <LineComponent/>
+      <FooterComponent/>
+      
       
       
       
@@ -60,5 +75,11 @@ button {
   transition: all .3s;
   cursor: pointer;
 }
+.swiper-wrapper {
+  width: 100vw;
+} 
+.swiper  {
+  width: 100%;
+} 
 
 `
