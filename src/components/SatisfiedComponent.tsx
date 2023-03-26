@@ -40,10 +40,18 @@ line-height: 140%;
 text-align: center;
 color: #FFFFFF;
 margin-top: 32px;
+@media (min-width: 767px) {
+  font-size: 16px;
+  width: 200px;
+height: 62px;
+}
 `
 
 const PriceP = styled.p`
     margin-top: 24px;
+    @media (min-width: 767px) {
+      margin-top: 32px;
+    }
 `
 
 const PriceRight = styled.span`
@@ -56,6 +64,10 @@ text-decoration-line: line-through;
 color: #181818;
 opacity: 0.5;
 margin-left: 8px;
+@media (min-width: 767px) {
+  font-size: 24px;
+  margin-left: 12px;
+}
 `
 
 const PriceLeft = styled.span`
@@ -65,6 +77,9 @@ font-size: 24px;
 line-height: 140%;
 text-align: center;
 color: #181818;
+@media (min-width: 767px) {
+  font-size: 32px;
+}
 `
 const P = styled.p`
 margin-top: 12px;
@@ -74,6 +89,11 @@ font-size: 14px;
 line-height: 150%;
 text-align: center;
 color: #181818;
+@media (min-width: 767px) {
+  font-size: 16px;
+line-height: 160%;
+margin-top: 16px;
+}
 `
 
 const H2 = styled.h2`
@@ -83,6 +103,10 @@ font-size: 24px;
 line-height: 150%;
 text-align: center;
 color: #181818;
+@media (min-width: 767px) {
+  font-size: 32px;
+line-height: 140%;
+}
 `
 
 const MainDiv = styled.div`
@@ -90,6 +114,9 @@ const MainDiv = styled.div`
   position: relative;
   height: 398px;
   margin-top: 80px;
+  @media (min-width: 767px) {
+    height: 487px;
+  }
 `;
 
 const BackgroundDiv = styled.div`
@@ -113,4 +140,7 @@ const Content = styled.div`
   position: absolute;
   top: 0;
   z-index: 10;
+  @media (min-width: 767px) {
+    padding: 80px 40px 60px 40px
+  }
 `;

@@ -20,9 +20,9 @@ export default function AccordeonDiv() {
               <H4>{data[index].question}</H4>
               <Button onClick={() => handleClick(index)}>
                 {clicked === index ? (
-                  <img src="/assets/minus.svg" alt="" />
+                  <Img src="/assets/minus.svg" alt="" />
                 ) : (
-                  <img src="/assets/plus.svg" alt="" />
+                  <Img src="/assets/plus.svg" alt="" />
                 )}
               </Button>
             </ItemHead>
@@ -36,6 +36,15 @@ export default function AccordeonDiv() {
   );
 }
 
+const Img = styled.img`
+  width: 20px;
+  height: 20px;
+  @media (min-width: 767px) {
+    width: 24px;
+    height: 24px;
+  }
+`
+
 const H4 = styled.h4`
     font-style: normal;
 font-weight: 500;
@@ -43,6 +52,9 @@ font-size: 16px;
 line-height: 160%;
 color: #181818;
 width: calc(100% - 88px);
+@media (min-width: 767px) {
+  font-size: 20px;
+}
 `
 
 const H2 = styled.h2`
@@ -53,6 +65,14 @@ line-height: 140%;
 color: #181818;
 text-align: center;
 margin-bottom: 24px;
+@media (min-width: 767px) {
+  font-size: 32px;
+  text-align: start;
+  margin-left:40.48px;
+  margin-bottom: 32px
+  
+  
+}
 `
 const P = styled.p`
 margin-top: 16px;
@@ -61,6 +81,11 @@ font-weight: 400;
 font-size: 14px;
 line-height: 150%;
 color: #181818;
+@media (min-width: 767px) {
+  font-size: 16px;
+}
+
+
 `
 
 const Button = styled.button`
@@ -70,6 +95,10 @@ const Button = styled.button`
 const MainDiv = styled.div`
   width: 100%;
   margin-top: 80px;
+  padding-bottom: 80px;
+  @media (min-width: 767px) {
+    padding: 0 40px 80px 40px;
+  }
   
 `;
 
@@ -82,6 +111,11 @@ const ContentItem = styled.div`
   padding: 24px 20px;
   align-items: center;
   justify-content: center;
+  @media (min-width: 767px) {
+    min-height: 128px;
+    margin-bottom: 16px;
+    padding: 32px 40px 32px 32px;
+  }
 `;
 const ItemHead = styled.div`
   display: flex;

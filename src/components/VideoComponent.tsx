@@ -8,7 +8,7 @@ export default function VideoComponent() {
       <H2>როდესაც გჯერა, რომ რაღაც შესაძლებელია, შანსები იზრდება</H2>
       <VideoDiv>
         <Circle>
-          <img src="/assets/play.svg" alt="" />
+          <PlayIcon src="/assets/play.svg" alt="" />
         </Circle>
       </VideoDiv>
       <IconsDiv>
@@ -45,6 +45,14 @@ export default function VideoComponent() {
   );
 }
 
+const PlayIcon = styled.img`
+  width: 18.67px;
+  height: 21.33px;
+  @media (min-width: 767px) {
+    width: 23.33px;
+    height: 26.67px;
+  }
+`
 const IconButton = styled.button`
     border: none;
     background: transparent;
@@ -55,6 +63,12 @@ const IconsDivUp = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+     @media (min-width: 767px) {
+      padding: 0;
+      width: calc(100% - 100px);
+      margin-right: 44px;
+      align-items: flex-end;
+    }
 `
 const IconsDivDown = styled.div`
     padding: 0 88.18px 0 81.29px;
@@ -62,11 +76,26 @@ const IconsDivDown = styled.div`
     flex-direction: row;
     justify-content: space-between;
     margin-top: 46.94px;
+    @media (min-width: 767px) {
+      padding: 0;
+      margin-top: 0;
+      width: calc(100% - 240px);
+      align-items: flex-end;
+    }
 `
 const IconsDiv = styled.div`
     display: flex;
     flex-direction: column;
-    padding-top: 62px;
+    padding-top: 60px;
+     @media (min-width: 767px) {
+      margin: 0 auto;
+      flex-direction:row;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(100% - 220px);
+      align-items: flex-end;
+    }
+   
 `
 
 const H2 = styled.p`
@@ -75,6 +104,9 @@ const H2 = styled.p`
   font-size: 24px;
   line-height: 150%;
   color: #181818;
+  @media (min-width: 767px) {
+    font-size: 32px;
+  }
 `;
 
 const MainDiv = styled.div`
@@ -82,6 +114,9 @@ const MainDiv = styled.div`
   flex-direction: column;
   width: 100%;
   padding: 60px 20px 64px 20px;
+  @media (min-width: 767px) {
+    padding: 80px 39.52px 64px 40.48px;
+  }
  
 `;
 
@@ -94,6 +129,10 @@ const VideoDiv = styled.div`
   width: 100%;
   height: 180px;
   background: black;
+  @media (min-width: 767px) {
+    margin-top: 24px;
+    height: 320px;
+  }
 `;
 
 const Circle = styled.div`
@@ -107,6 +146,10 @@ const Circle = styled.div`
   background:#666666;
   mix-blend-mode: normal;
   position: relative;
+  @media (min-width: 767px) {
+    width: 66.67px;
+    height: 66.67px;
+  }
   
 `;
 

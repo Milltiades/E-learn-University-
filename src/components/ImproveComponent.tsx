@@ -15,7 +15,13 @@ export default function ImproveComponent() {
         <Button>შეურთდი</Button>
       </Content>
       <DivImg>
+        {window.innerWidth > 767 ?
+         <DolarImg src="/assets/tablet/tabletDolar.png" alt="" />
+        :
         <DolarImg src="/assets/dolar-img.png" alt="" />
+        }
+       
+        
       </DivImg>
     </MainDiv>
   );
@@ -25,11 +31,18 @@ position: relative;
     width: 100%;
     height: 200px;
     overflow: hidden;
+    @media (min-width: 767px) {
+      height: 294px;
+    }
 `
 const DolarImg = styled.img`
     width: 100%;
     position: absolute;
     top: -230px;
+    @media (min-width: 767px){
+      top: -380px;
+    }
+   
 `
 
 const Button = styled.button`
@@ -49,6 +62,9 @@ const Button = styled.button`
   font-size: 14px;
   line-height: 140%;
   margin-top: 24px;
+  @media (min-width: 767px){
+    margin-top: 32px;
+  }
 `;
 
 const Span = styled.span`
@@ -57,6 +73,9 @@ const Span = styled.span`
   font-size: 24px;
   line-height: 150%;
   color: #276ef1;
+  @media (min-width:767px){
+    font-size: 32px;
+  }
 `;
 
 const P = styled.p`
@@ -67,6 +86,9 @@ const P = styled.p`
   color: #181818;
   text-align: left;
   margin-top: 8px;
+  @media (min-width: 767px){
+    font-size: 16px;
+  }
 `;
 
 const H1 = styled.h1`
@@ -75,11 +97,18 @@ const H1 = styled.h1`
   font-size: 32px;
   line-height: 150%;
   text-align: left;
+  @media (min-width:767px){
+font-size: 48px;
+line-height: 150%;
+  }
 `;
 const Content = styled.div`
   display: flex;
   flex-direction: column;
   padding: 12px 20px 40px 20px;
+  @media (min-width: 767px){
+    padding: 8px 40px 40px 42px;
+  }
 `;
 
 const MainDiv = styled.div`

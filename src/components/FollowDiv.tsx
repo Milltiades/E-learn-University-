@@ -60,11 +60,18 @@ const Button = styled.button`
   padding: 20px 0;
   margin-top: 16px;
   height: 60px;
+@media (min-width: 767px) {
+  height: 62px;
+  font-size: 16px;
+}
 `
 
 const Form = styled.form`
   width: 100%;
   margin-top: 32px;
+  @media (min-width: 767px) {
+    margin-top: 40px;
+  }
 `;
 
 const Label = styled.label`
@@ -72,12 +79,14 @@ const Label = styled.label`
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
   color: #181818;
+  @media (min-width: 767px){
+    font-size: 16px;
+  }
 `;
 
 const Input = styled.input`
@@ -88,6 +97,13 @@ const Input = styled.input`
   padding: 20px 0 20px 32px;
   margin-top: 8px;
   margin-bottom: 16px;
+  font-size: 14px;
+  height: 60px;
+  @media (min-width: 767px){
+    font-size: 16px;
+    height: 62px;
+  }
+  
 `;
 
 const Content = styled.div`
@@ -101,6 +117,10 @@ const Content = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
+  @media (min-width: 767px) {
+    height: 499px;
+     padding: 60px 40px;
+  }
 `;
 
 const H2 = styled.h2`
@@ -110,12 +130,18 @@ const H2 = styled.h2`
   line-height: 140%;
   text-align: center;
   color: #181818;
+  @media (min-width: 767px) {
+    font-size: 32px;
+  }
 `;
 
 const MainDiv = styled.div`
   width: 100%;
   position: relative;
   height: 430px;
+  @media (min-width: 767px) {
+    height: 499px;
+  }
 `;
 
 const BackgroundDiv = styled.div`
@@ -126,4 +152,7 @@ const BackgroundDiv = styled.div`
   background: linear-gradient(95.64deg, #276ef1 0.63%, #1bc8c8 100%);
   opacity: 0.1;
   z-index: 0;
+  @media (min-width: 767px) {
+    height: 499px;
+  }
 `;

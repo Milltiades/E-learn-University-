@@ -34,7 +34,6 @@ function App() {
       <ReviewSlider/>
       <AccordeonDiv/>
       <FollowDiv/>
-      <LineComponent/>
       <FooterComponent/>
       
       

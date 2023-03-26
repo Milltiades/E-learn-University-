@@ -44,6 +44,9 @@ font-size: 14px;
 line-height: 140%;
 color: #181818;
 opacity: 0.5;
+@media (min-width: 767px) {
+  font-size: 16px;
+}
 `
 
 const H5 = styled.h5`
@@ -53,12 +56,19 @@ font-size: 14px;
 line-height: 140%;
 color: #181818;
 margin-bottom: 24px;
+@media (min-width: 767px) {
+  font-size: 16px;
+  margin-right: 32px;
+}
 `
 
 const Content = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 5px;
+    @media (min-width: 767px) {
+      flex-direction: row;
+    }
 `
 
 const Button = styled.button`
@@ -84,10 +94,20 @@ const IconsDiv = styled.div`
 const Logo = styled.img`
   width: 185.91px;
   height: 26.09px;
+  @media (min-width: 767px) {
+    width: 233.38px;
+    height: 34.78px;
+  }
 `;
 const MainDiv = styled.div`
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   padding: 40px 0 40px 20px;
+  border-top: 2.62px solid #276EF1;
+  @media (min-width: 767px) {
+    padding: 60px 0 60px 40px;
+    border-top: 2.57px solid #276EF1;
+  }
 `;

@@ -64,6 +64,10 @@ const H1 = styled.h1`
   line-height: 140%;
   color: #181818;
   margin-left: 20px;
+  @media (min-width: 767px) {
+    margin-left: 0;
+    font-size: 32px;
+  }
 `;
 
 const MainDiv = styled.div`
@@ -71,6 +75,9 @@ const MainDiv = styled.div`
   flex-direction: column;
   width: 100%;
   padding-top: 80px;
+  @media (min-width: 767px) {
+    padding: 80px 40px 0 40px;
+  }
 `;
 
 const Course1 = styled.div`
@@ -81,9 +88,19 @@ const Course1 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: 767px) {
+  
+  justify-content: center;
+
+width: 25%;
+height: 198px;
+  }
 `;
 const Course2 = styled(Course1)`
   border-right: 0px solid #d1d1d1;
+  @media (min-width: 767px){
+    border-right: 1px solid #d1d1d1;
+  }
 `;
 
 const Course3 = styled.div`
@@ -95,13 +112,41 @@ const Course3 = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (min-width: 767px) {
+
+width: 25%;
+height: 198px;
+  }
 `;
 
 const Course4 = styled(Course3)`
   border-right: 0px solid #d1d1d1;
+  @media (min-width: 767px) {
+    width: 25%;
+height: 198px;
+  }
+  
+
 `;
-const Course5 = styled(Course3)``;
-const Course6 = styled(Course4)``;
+const Course5 = styled(Course3)`
+@media (min-width: 767px) {
+  
+width: 33.333333%;
+height: 198px;
+border-bottom: 0px solid #d1d1d1;
+}
+
+
+`;
+const Course6 = styled(Course4)`
+
+@media (min-width: 767px) {
+  border-right: 1px solid #d1d1d1;
+width: 33.333333%;
+height: 198px;
+border-bottom: 0px solid #d1d1d1;
+}
+`;
 
 const Course7 = styled.div`
   width: 100%;
@@ -111,6 +156,12 @@ const Course7 = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+@media (min-width: 767px) {
+  
+width: 33.333333%;
+height: 198px;
+border-bottom: 0px solid #d1d1d1;
+}
 `;
 const Img = styled.img`
   opacity: 100;

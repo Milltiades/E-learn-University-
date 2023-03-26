@@ -15,15 +15,61 @@ export default function CashSlider() {
   return (
     <MainDiv>
       <H2andButton>
-        <H2>
-          Cash Rules Everything <br />
-          Around Us
-        </H2>
-        <Button onClick={() => slider.slidePrev()}> prev</Button>
-        <Button onClick={() => slider.slideNext()}> next</Button>
+        <H2>Cash Rules Everything Around Us</H2>
+        <ButtonsDiv>
+          <Button onClick={() => slider.slidePrev()}> 
+          <img src="/assets/tablet/leftarrow.svg" alt="" />
+          </Button>
+          <Button onClick={() => slider.slideNext()}> 
+          <img src="/assets/tablet/rightarrow.svg" alt="" />
+          </Button>
+        </ButtonsDiv>
       </H2andButton>
 
-      <Swiper
+      {window.innerWidth > 767 ?
+        <Swiper
+        onSwiper={(swiper) => setSlider(swiper)}
+        modules={[Navigation, Pagination, Autoplay]}
+        slidesPerView={2.1}
+        spaceBetween={16}
+        // navigation
+        autoplay={{ delay: 3000 }}
+        //   pagination={{ clickable: true }}
+      >
+        <SwiperSlide>
+          <SlideDiv image={`url("/assets/tablet/tabletslide1.png")`}>
+            <ShadowDiv>
+              <P>გიორგი თ.</P>
+            </ShadowDiv>
+          </SlideDiv>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <SlideDiv image={`url("/assets/tablet/tabletslide2.png")`}>
+            <ShadowDiv>
+              <P>ლაშა ლ.</P>
+            </ShadowDiv>
+          </SlideDiv>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <SlideDiv image={`url("/assets/tablet/tabletslide1.png")`}>
+            <ShadowDiv>
+              <P>გიორგი თ.</P>
+            </ShadowDiv>
+          </SlideDiv>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <SlideDiv image={`url("/assets/tablet/tabletslide2.png")`}>
+            <ShadowDiv>
+              <P>ლაშა ლ.</P>
+            </ShadowDiv>
+          </SlideDiv>
+        </SwiperSlide>
+      </Swiper>
+       :
+        <Swiper
         onSwiper={(swiper) => setSlider(swiper)}
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={1.35}
@@ -37,7 +83,6 @@ export default function CashSlider() {
             <ShadowDiv>
               <P>გიორგი თ.</P>
             </ShadowDiv>
-            
           </SlideDiv>
         </SwiperSlide>
 
@@ -46,14 +91,41 @@ export default function CashSlider() {
             <ShadowDiv>
               <P>ლაშა ლ.</P>
             </ShadowDiv>
-            
           </SlideDiv>
         </SwiperSlide>
-        
-      </Swiper>
+
+        <SwiperSlide>
+          <SlideDiv image={`url("/assets/cashslider/slide1.png")`}>
+            <ShadowDiv>
+              <P>გიორგი თ.</P>
+            </ShadowDiv>
+          </SlideDiv>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <SlideDiv image={`url("/assets/cashslider/slide2.png")`}>
+            <ShadowDiv>
+              <P>ლაშა ლ.</P>
+            </ShadowDiv>
+          </SlideDiv>
+        </SwiperSlide>
+      </Swiper>}
     </MainDiv>
   );
 }
+
+const ButtonsDiv = styled.div`
+display: none;
+@media (min-width: 767px) {
+display: flex;
+  flex-direction: row;
+  width: 132px;
+  justify-content: space-between;
+  margin-right: 40px;
+  align-items: center;
+}
+  
+`
 
 const ShadowDiv = styled.div`
   width: 100%;
@@ -67,6 +139,10 @@ const ShadowDiv = styled.div`
   background-size: cover;
   top: 0;
   position: absolute;
+  @media (min-width: 767px) {
+    height: 220px;
+    background-image: url("/assets/tablet/tabletshadow.png");
+  }
 `;
 const P = styled.p`
   font-style: normal;
@@ -76,9 +152,28 @@ const P = styled.p`
   color: #ffffff;
 `;
 
-const H2andButton = styled.div``;
+const H2andButton = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media (min-width: 767px) {
+     margin-bottom: 24px;
+  }
+`;
 const Button = styled.button`
   display: none;
+  @media (min-width: 767px) {
+    display: flex;
+    border: none;
+    background: rgba(39, 110, 241, 0.1);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const MainDiv = styled.div`
   padding-top: 80px;
@@ -93,6 +188,12 @@ const H2 = styled.h2`
   line-height: 140%;
   color: #181818;
   margin-bottom: 16px;
+  width: 70%;
+  @media (min-width: 767px) {
+    font-size: 32px;
+    width: calc(100% - 200px);
+     margin-bottom: 0px;
+  }
 `;
 
 const SlideDiv = styled.div<any>`
@@ -102,6 +203,9 @@ const SlideDiv = styled.div<any>`
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  @media (min-width: 767px) {
+    height: 220px;
+  }
 `;
 
 const ImgShadow = styled.img`

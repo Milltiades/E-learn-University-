@@ -37,6 +37,11 @@ const DivImg = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 32px;
+  @media (min-width: 767px) {
+    background-image: url("/assets//tablet/tabletRoom.png");
+    height: 340px;
+    margin-top: 40px;
+  }
 `;
 const Button = styled.button`
   width: 200px;
@@ -49,7 +54,10 @@ const Button = styled.button`
   font-size: 14px;
   line-height: 140%;
   color: #ffffff;
-  margin-top: 44px;
+  margin-top: 24px;
+  @media (min-width: 767px) {
+    margin-top: 32px;
+  }
 `;
 
 const MainDiv = styled.div`
@@ -59,6 +67,9 @@ const MainDiv = styled.div`
 const Content = styled.div`
   width: 100%;
   padding: 80px 20px 0 20px;
+  @media (min-width: 767px) {
+    padding: 80px 39.52px 0 40.48px;
+  }
 `;
 
 const H2 = styled.h2`
@@ -67,6 +78,9 @@ const H2 = styled.h2`
   font-size: 24px;
   line-height: 140%;
   color: #181818;
+  @media (min-width: 767px) {
+    font-size: 32px;
+  }
 `;
 
 const P = styled.p`
@@ -75,4 +89,9 @@ const P = styled.p`
   font-size: 14px;
   line-height: 160%;
   color: #181818;
+  margin-top: 8px;
+  @media (min-width: 767px) {
+    font-size: 16px;
+    margin-top: 16px;
+  }
 `;
