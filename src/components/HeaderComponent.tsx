@@ -11,7 +11,7 @@ export default function HeaderComponent({
   return (
     <Header
     center={click ? "flexStart" : "center"}
-    height={click ? "100vh" : "auto"}>
+    height={click ? "100vh" : "autopx"}>
       <Ul>
         <Li>ჩვენს შესახებ</Li>
         <Li>მიმოხილვა</Li>
@@ -107,7 +107,7 @@ const Button = styled.button`
   background: transparent;
   cursor: pointer;
   transition: all 0.3 ease;
-  height: 20px;
+  height: 25px;
   @media (min-width: 767px) {
     display: none;
   }
@@ -115,7 +115,6 @@ const Button = styled.button`
 const BurgerImg = styled.img`
   width: 32px;
   height: 25px;
-  z-index: 1000;
  
 `;
 
