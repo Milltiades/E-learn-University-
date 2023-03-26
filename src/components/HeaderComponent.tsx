@@ -69,7 +69,7 @@ export default function HeaderComponent({
             console.log("click")
             setClick(false);
             setTimeout(() => {
-              window.scrollTo({top: 2500, behavior: 'smooth'})
+              window.scrollTo({top: 2460, behavior: 'smooth'})
             }, 100)
           }}
           >მიმოხილვა</LiMobile>
