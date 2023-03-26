@@ -40,6 +40,10 @@ line-height: 140%;
 text-align: center;
 color: #FFFFFF;
 margin-top: 32px;
+transition: all .3s ease;
+  &:hover {
+    background: #1350C2;
+  }
 @media (min-width: 767px) {
   font-size: 16px;
   width: 200px;
@@ -94,6 +98,13 @@ color: #181818;
 line-height: 160%;
 margin-top: 16px;
 }
+@media (min-width: 1200px) {
+  width: calc(100% - 500px);
+  width: 60%;
+}
+@media (min-width: 1740px) {
+  width: 40%;
+}
 `
 
 const H2 = styled.h2`
@@ -116,6 +127,10 @@ const MainDiv = styled.div`
   margin-top: 80px;
   @media (min-width: 767px) {
     height: 487px;
+  }
+   @media (min-width: 1200px) {
+    margin-top: 100px;
+    height: 456px;
   }
 `;
 
@@ -142,5 +157,9 @@ const Content = styled.div`
   z-index: 10;
   @media (min-width: 767px) {
     padding: 80px 40px 60px 40px
+
+  }
+  @media (min-width: 1200px) {
+    padding: 100px 0 80px 0;
   }
 `;

@@ -14,36 +14,65 @@ export default function ImproveComponent() {
         </P>
         <Button>შეურთდი</Button>
       </Content>
-      <DivImg>
-        {window.innerWidth > 767 ?
-         <DolarImg src="/assets/tablet/tabletDolar.png" alt="" />
-        :
-        <DolarImg src="/assets/dolar-img.png" alt="" />
-        }
-       
-        
+      <DivImg display={window.innerWidth > 1200 ? "none" : "flex"}>
+        {window.innerWidth > 767 ? (
+          <DolarImg src="/assets/tablet/tabletDolar.png" alt="" />
+        ) : (
+          <DolarImg src="/assets/dolar-img.png" alt="" />
+        )}
       </DivImg>
+      {/* <DesktopBackground/> */}
+      <DesktopImg src="/assets/desktop/desktopbackground.png" alt="" />
     </MainDiv>
   );
 }
-const DivImg = styled.div`
+
+const DesktopImg = styled.img`
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  @media (min-width: 1200px) {
+    display: flex;
+    height: 534px;
+  }
+  @media (min-width: 1439px) {
+    height: 544px;
+  }
+  @media (min-width: 1800) {
+    height: 634px;
+  }
+`
+const DesktopBackground = styled.div`
+  width: 100vw;
+z-index: 10000;
+  top: -100px;
+  height: 634px;
+  /* transform: translateY(-100px); */
 position: relative;
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    @media (min-width: 767px) {
-      height: 294px;
-    }
-`
+  background-image: url("assets/desktop/desktopbackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
+`;
+const DivImg = styled.div<any>`
+  display: ${(props) => props.display};
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  @media (min-width: 767px) {
+    height: 294px;
+  }
+`;
 const DolarImg = styled.img`
-    width: 100%;
-    position: absolute;
-    top: -230px;
-    @media (min-width: 767px){
-      top: -380px;
-    }
-   
-`
+  width: 100%;
+  position: absolute;
+  top: -230px;
+  @media (min-width: 767px) {
+    top: -380px;
+  }
+`;
 
 const Button = styled.button`
   display: flex;
@@ -61,9 +90,13 @@ const Button = styled.button`
   font-weight: 500;
   font-size: 14px;
   line-height: 140%;
-  margin-top: 24px;
-  @media (min-width: 767px){
-    margin-top: 32px;
+  margin: 24px auto 0;
+  transition: all 0.3s ease;
+  &:hover {
+    background: #1350c2;
+  }
+  @media (min-width: 767px) {
+    margin: 32px 0 0;
   }
 `;
 
@@ -73,7 +106,7 @@ const Span = styled.span`
   font-size: 24px;
   line-height: 150%;
   color: #276ef1;
-  @media (min-width:767px){
+  @media (min-width: 767px) {
     font-size: 32px;
   }
 `;
@@ -84,30 +117,42 @@ const P = styled.p`
   font-size: 14px;
   line-height: 150%;
   color: #181818;
-  text-align: left;
+  text-align: center;
   margin-top: 8px;
-  @media (min-width: 767px){
+  @media (min-width: 767px) {
     font-size: 16px;
+    text-align: left;
   }
 `;
 
 const H1 = styled.h1`
   font-style: normal;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 150%;
-  text-align: left;
-  @media (min-width:767px){
-font-size: 48px;
-line-height: 150%;
+  text-align: center;
+  @media (min-width: 767px) {
+    font-size: 3rem;
+    line-height: 150%;
+    text-align: left;
+  }
+  @media (min-width: 1200px) {
   }
 `;
 const Content = styled.div`
   display: flex;
   flex-direction: column;
   padding: 12px 20px 40px 20px;
-  @media (min-width: 767px){
+position: relative;
+  @media (min-width: 767px) {
     padding: 8px 40px 40px 42px;
+  }
+  @media (min-width: 1200px) {
+    width: 50vw;
+    padding: 36px 0 0 80px;
+    z-index: -2000;
+    
+   
   }
 `;
 
@@ -115,4 +160,8 @@ const MainDiv = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    
+  }
 `;

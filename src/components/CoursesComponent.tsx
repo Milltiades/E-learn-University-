@@ -78,6 +78,9 @@ const MainDiv = styled.div`
   @media (min-width: 767px) {
     padding: 80px 40px 0 40px;
   }
+  @media (min-width: 1200px) {
+    padding: 100px 80px 0 80px;
+  }
 `;
 
 const Course1 = styled.div`

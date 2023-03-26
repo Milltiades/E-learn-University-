@@ -27,6 +27,48 @@ export default function ReviewSlider() {
       </H2andButton>
 
       {
+        window.innerWidth > 1200 ? 
+        <Swiper
+        onSwiper={(swiper) => setSlider(swiper)}
+        modules={[Navigation, Pagination, Autoplay]}
+        slidesPerView={4.1}
+        spaceBetween={16}
+        // navigation
+        autoplay={{ delay: 3000 }}
+        //   pagination={{ clickable: true }}
+      >
+        <SwiperSlide>
+          <SlideDiv image={`url("/assets/tablet/tabletreview1.png")`}>
+            
+          </SlideDiv>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <SlideDiv image={`url("/assets/tablet/tabletreview2.png")`}>
+           
+          </SlideDiv>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <SlideDiv image={`url("/assets/tablet/tabletreview1.png")`}>
+            
+          </SlideDiv>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <SlideDiv image={`url("/assets/tablet/tabletreview2.png")`}>
+           
+          </SlideDiv>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <SlideDiv image={`url("/assets/tablet/tabletreview1.png")`}>
+            
+          </SlideDiv>
+        </SwiperSlide>
+      </Swiper>
+      :
+
         window.innerWidth > 767 ? 
         <Swiper
         onSwiper={(swiper) => setSlider(swiper)}
@@ -110,6 +152,9 @@ display: flex;
   margin-right: 40px;
   align-items: center;
 }
+@media (min-width: 1200px) {
+  margin-right: 80px;
+}
   
 `
 
@@ -163,6 +208,10 @@ const MainDiv = styled.div`
   @media (min-width: 767px) {
     padding-top: 88px;
     padding-left: 40.48px;
+  }
+  @media (min-width: 1200px) {
+    padding-top: 108px;
+    padding-left: 80px;
   }
 `;
 

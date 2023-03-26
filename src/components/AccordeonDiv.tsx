@@ -13,6 +13,7 @@ export default function AccordeonDiv() {
   return (
     <MainDiv>
         <H2>ხშირად დასმული კითხვები</H2>
+        <Accordeon>
       {data.map((item, index) => {
         return (
           <ContentItem key={index}>
@@ -32,10 +33,21 @@ export default function AccordeonDiv() {
           </ContentItem>
         );
       })}
+      </Accordeon>
     </MainDiv>
   );
 }
 
+const Accordeon = styled.div`
+  width: 100%;
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+  }
+`
 const Img = styled.img`
   width: 20px;
   height: 20px;
@@ -73,6 +85,9 @@ margin-bottom: 24px;
   
   
 }
+@media (min-width: 1200px) {
+  margin-left:0;
+}
 `
 const P = styled.p`
 margin-top: 16px;
@@ -99,6 +114,10 @@ const MainDiv = styled.div`
   @media (min-width: 767px) {
     padding: 0 40px 80px 40px;
   }
+  @media (min-width: 1200px) {
+    margin-top: 100px;
+    padding: 0 80px 80px;
+  }
   
 `;
 
@@ -115,6 +134,9 @@ const ContentItem = styled.div`
     min-height: 128px;
     margin-bottom: 16px;
     padding: 32px 40px 32px 32px;
+  }
+  @media (min-width: 1200px) {
+    width: 49.35%;
   }
 `;
 const ItemHead = styled.div`

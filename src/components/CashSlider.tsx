@@ -124,6 +124,9 @@ display: flex;
   margin-right: 40px;
   align-items: center;
 }
+@media (min-width: 1200px) {
+  margin-right: 80px;
+}
   
 `
 
@@ -143,6 +146,9 @@ const ShadowDiv = styled.div`
     height: 220px;
     background-image: url("/assets/tablet/tabletshadow.png");
   }
+   @media (min-width: 1200px) {
+    height: 360px;
+  }
 `;
 const P = styled.p`
   font-style: normal;
@@ -159,6 +165,9 @@ const H2andButton = styled.div`
   align-items: center;
   @media (min-width: 767px) {
      margin-bottom: 24px;
+  }
+  @media (min-width: 1200px) {
+    margin-bottom: 31px;
   }
 `;
 const Button = styled.button`
@@ -179,6 +188,10 @@ const MainDiv = styled.div`
   padding-top: 80px;
   width: 100%;
   padding-left: 20px;
+  @media (min-width: 1200px) {
+    padding-top: 108px;
+    padding-left: 80px;
+  }
 `;
 
 const H2 = styled.h2`
@@ -205,6 +218,9 @@ const SlideDiv = styled.div<any>`
   position: relative;
   @media (min-width: 767px) {
     height: 220px;
+  }
+  @media (min-width: 1200px) {
+    height: 360px;
   }
 `;
 

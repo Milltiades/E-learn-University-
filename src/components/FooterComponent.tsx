@@ -60,6 +60,9 @@ margin-bottom: 24px;
   font-size: 16px;
   margin-right: 32px;
 }
+@media (min-width: 1200px) {
+  margin-bottom: 0;
+}
 `
 
 const Content = styled.div`
@@ -68,6 +71,10 @@ const Content = styled.div`
     margin-top: 5px;
     @media (min-width: 767px) {
       flex-direction: row;
+    }
+    @media (min-width: 1200px) {
+      width: 100%;
+      margin-top: 0px;
     }
 `
 
@@ -88,6 +95,12 @@ const IconsDiv = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 39px;
+  @media (min-width: 1200px) {
+    width: auto;
+    flex-wrap: nowrap;
+     margin-top: 0;
+     align-items: flex-end;
+  }
   
 `;
 
@@ -109,5 +122,11 @@ const MainDiv = styled.div`
   @media (min-width: 767px) {
     padding: 60px 0 60px 40px;
     border-top: 2.57px solid #276EF1;
+  }
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 60px 80px;
+    justify-content: space-between;
   }
 `;

@@ -42,6 +42,11 @@ const DivImg = styled.div`
     height: 340px;
     margin-top: 40px;
   }
+  @media (min-width: 1200px) {
+    height: 573px;
+    background-image: url("/assets//desktop/desktopRoom.png");
+    margin-top: 0;
+  }
 `;
 const Button = styled.button`
   width: 200px;
@@ -55,6 +60,10 @@ const Button = styled.button`
   line-height: 140%;
   color: #ffffff;
   margin-top: 24px;
+  transition: all .3s ease;
+  &:hover {
+    background: linear-gradient(90deg, #1350C2 0%, #159595 100%);
+  }
   @media (min-width: 767px) {
     margin-top: 32px;
   }
@@ -62,6 +71,12 @@ const Button = styled.button`
 
 const MainDiv = styled.div`
   width: 100%;
+  @media (min-width: 1200px) {
+    padding: 0 80px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+  }
 `;
 
 const Content = styled.div`
@@ -69,6 +84,9 @@ const Content = styled.div`
   padding: 80px 20px 0 20px;
   @media (min-width: 767px) {
     padding: 80px 39.52px 0 40.48px;
+  }
+  @media (min-width: 1200px) {
+    padding: 40px 16px 0 0;
   }
 `;
 

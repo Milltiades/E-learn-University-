@@ -69,6 +69,9 @@ const IconsDivUp = styled.div`
       margin-right: 44px;
       align-items: flex-end;
     }
+     @media (min-width: 1200px) {
+      margin-right: 33px;
+    }
 `
 const IconsDivDown = styled.div`
     padding: 0 88.18px 0 81.29px;
@@ -81,6 +84,9 @@ const IconsDivDown = styled.div`
       margin-top: 0;
       width: calc(100% - 240px);
       align-items: flex-end;
+    }
+     @media (min-width: 1200px) {
+      width: 50%;
     }
 `
 const IconsDiv = styled.div`
@@ -95,17 +101,22 @@ const IconsDiv = styled.div`
       width: calc(100% - 220px);
       align-items: flex-end;
     }
+    @media (min-width: 1200px) {
+      width: 30%;
+    }
    
 `
 
 const H2 = styled.p`
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 150%;
   color: #181818;
+  text-align: center;
   @media (min-width: 767px) {
     font-size: 32px;
+    text-align: left;
   }
 `;
 
@@ -116,6 +127,10 @@ const MainDiv = styled.div`
   padding: 60px 20px 64px 20px;
   @media (min-width: 767px) {
     padding: 80px 39.52px 64px 40.48px;
+  }
+  @media (min-width: 1200px) {
+    padding: 100px 80px 60px 80px;
+    margin-top: 55px;
   }
  
 `;
@@ -132,6 +147,9 @@ const VideoDiv = styled.div`
   @media (min-width: 767px) {
     margin-top: 24px;
     height: 320px;
+  }
+  @media (min-width: 1200px) {
+    height: 520px;
   }
 `;
 

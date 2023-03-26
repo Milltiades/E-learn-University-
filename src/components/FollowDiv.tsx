@@ -121,6 +121,9 @@ const Content = styled.div`
     height: 499px;
      padding: 60px 40px;
   }
+  @media (min-width: 1200px) {
+    padding: 60px 28%;
+  }
 `;
 
 const H2 = styled.h2`
