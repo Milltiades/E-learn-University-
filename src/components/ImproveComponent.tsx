@@ -150,7 +150,7 @@ position: relative;
   @media (min-width: 1200px) {
     width: 50vw;
     padding: 36px 0 0 80px;
-    z-index: -2000;
+    z-index: 2000;
     
    
   }

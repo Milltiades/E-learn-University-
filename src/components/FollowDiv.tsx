@@ -1,21 +1,30 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import styled from "styled-components";
 
+
 export default function FollowDiv() {
+
+  const {register, getValues, formState : { errors}, handleSubmit} = useForm<any>();
+  const onSubmit = () => {
+    console.log(getValues("name"))
+  }
   return (
     <MainDiv>
       <BackgroundDiv />
       <Content>
         <H2>გამოიწერე Newsletter!</H2>
-        <Form action="">
+        <Form action="" onSubmit={handleSubmit(onSubmit)}>
           <Label htmlFor="">
             სრული სახელი *
-            <Input type="text" placeholder="ნიკა თეთრუაშვილი" />
+            <Input type="text" placeholder="ნიკა თეთრუაშვილი" {...register("name", { required: "აუცილებლად შესავსები" })}/>
+            {errors.name &&  <Error>{errors.name.message}</Error>}
           </Label>
 
           <Label htmlFor="">
             ელ. ფოსტა *
-            <Input type="text" placeholder="nikusha.tetruashvili@gmail.com" />
+            <Input type="text" placeholder="nikusha.tetruashvili@gmail.com" {...register("email", { required: "აუცილებლად შესავსები" })}/>
+            {errors.email &&  <Error>{errors.email.message}</Error>}
           </Label>
           <Button>Subscribe</Button>
         </Form>
@@ -23,6 +32,15 @@ export default function FollowDiv() {
     </MainDiv>
   );
 }
+
+const Error = styled.p<any>`
+  color: red;
+  text-align: center;
+  align-self: flex-end;
+  position: absolute;
+  
+  
+`
 
 // const SubmitInput = styled.input`
 //   width: 100%;
@@ -69,12 +87,14 @@ const Button = styled.button`
 const Form = styled.form`
   width: 100%;
   margin-top: 32px;
+  
   @media (min-width: 767px) {
     margin-top: 40px;
   }
 `;
 
 const Label = styled.label`
+position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

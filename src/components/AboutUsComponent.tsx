@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 
-export default function AboutUsComponent() {
+export default function AboutUsComponent(
+  
+) {
+
+  const refUs = useRef<any>()
   return (
-    <MainDiv>
+    <MainDiv ref={refUs}>
       <Content>
         <H2>რა არის L-earn?</H2>
         <P>

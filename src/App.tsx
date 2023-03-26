@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import AboutUsComponent from "./components/AboutUsComponent";
 import AccordeonDiv from "./components/AccordeonDiv";
@@ -14,8 +14,10 @@ import ReviewSlider from "./components/ReviewSlidet";
 import SatisfiedComponent from "./components/SatisfiedComponent";
 import VideoComponent from "./components/VideoComponent";
 
+
 function App() {
   const [click, setClick] = useState<boolean>(false);
+  const refUs = useRef<any>()
 
   return (
     <div className="App">

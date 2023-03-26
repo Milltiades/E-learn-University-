@@ -1,21 +1,50 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
 export default function HeaderComponent({
   click,
   setClick,
+ 
 }: {
   click: any;
   setClick: any;
+ 
 }) {
+
+  function handleClick() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+  
   return (
     <Header
     center={click ? "flexStart" : "center"}
     height={click ? "100vh" : "autopx"}>
       <Ul>
-        <Li>ჩვენს შესახებ</Li>
-        <Li>მიმოხილვა</Li>
-        <Li>FAQ</Li>
+        <Li onClick={() => {
+          console.log("click")
+          setClick(false);
+          setTimeout(() => {
+            window.scrollTo({top: 1900, behavior: 'smooth'})
+          }, 100)
+        }}>ჩვენს შესახებ</Li>
+        <Li 
+         onClick={() => {
+          console.log("click")
+          setClick(false);
+          setTimeout(() => {
+            window.scrollTo({top: 2520, behavior: 'smooth'})
+          }, 100)
+        }}
+        >მიმოხილვა</Li>
+        <Li
+         onClick={() => {
+          console.log("click")
+          setClick(false);
+          setTimeout(() => {
+            window.scrollTo({top: 4700, behavior: 'smooth'})
+          }, 100)
+        }}
+        >FAQ</Li>
       </Ul>
       <Button onClick={() => setClick(!click)}>
         {click ? (
@@ -27,9 +56,32 @@ export default function HeaderComponent({
       <LogoImg src="/assets/learn-logo.svg" alt="" />
       
         <UlMobile display={click? "block" : "none"}>
-          <LiMobile>ჩვენს შესახებ</LiMobile>
-          <LiMobile>მიმოხილვა</LiMobile>
-          <LiMobile style={{marginBottom:"0"}}>FAQ</LiMobile>
+          <LiMobile onClick={() => {
+          console.log("click")
+          setClick(false);
+          setTimeout(() => {
+            window.scrollTo({top: 1600, behavior: 'smooth'})
+          }, 100)
+        }}
+          >ჩვენს შესახებ</LiMobile>
+          <LiMobile
+          onClick={() => {
+            console.log("click")
+            setClick(false);
+            setTimeout(() => {
+              window.scrollTo({top: 2500, behavior: 'smooth'})
+            }, 100)
+          }}
+          >მიმოხილვა</LiMobile>
+          <LiMobile style={{marginBottom:"0"}}
+          onClick={() => {
+            console.log("click")
+            setClick(false);
+            setTimeout(() => {
+              window.scrollTo({top: 4400, behavior: 'smooth'})
+            }, 100)
+          }}
+          >FAQ</LiMobile>
         </UlMobile>
       
     </Header>
@@ -54,6 +106,7 @@ text-align: center;
 color: #181818;
 list-style: none;
 margin-bottom: 80px;
+cursor: pointer;
 `
 
 const Ul = styled.ul`
@@ -84,6 +137,7 @@ const Li = styled.li`
   line-height: 140%;
   color: #181818;
   list-style: none;
+  cursor: pointer;
 `;
 const Header = styled.div<any>`
   position: relative;
