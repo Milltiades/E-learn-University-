@@ -11,7 +11,7 @@ export default function HeaderComponent({
   return (
     <Header
     center={click ? "flexStart" : "center"}
-    height={click ? "100vh" : "auto"}>
+    height={click ? "100vh" : "89px"}>
       <Ul>
         <Li>ჩვენს შესახებ</Li>
         <Li>მიმოხილვა</Li>
