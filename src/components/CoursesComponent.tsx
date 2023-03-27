@@ -7,15 +7,15 @@ export default function CoursesComponent() {
       <H1>კურსები</H1>
       <CoursesDiv>
         <Course1>
-          <Img src="/assets/trading.svg" alt="" />
+          <Img src="/assets/tradingnew.svg" alt="" />
           <H3>Trading</H3>
         </Course1>
         <Course2>
-          <Img src="/assets/crypto.svg" alt="" />
+          <Img src="/assets/cryptonew.svg" alt="" />
           <H3>Crypto & NFTs</H3>
         </Course2>
         <Course3>
-          <Img src="/assets/aitools.svg" alt="" />
+          <Img src="/assets/aitoolsnew.svg" alt="" />
           <H3>AI Tools</H3>
         </Course3>
         <Course4>
@@ -47,6 +47,12 @@ const H3 = styled.h3`
   line-height: 140%;
   text-align: center;
   color: #181818;
+  @media (min-width: 767px){
+    margin-top: 16px;
+  }
+  @media (min-width: 1200px){
+    margin-top: 24px;
+  }
 `;
 
 const CoursesDiv = styled.div`
@@ -168,4 +174,8 @@ border-bottom: 0px solid #d1d1d1;
 `;
 const Img = styled.img`
   opacity: 100;
+  @media (min-width: 1200px) {
+    width: 80px;
+    height: 80px;
+  }
 `;
