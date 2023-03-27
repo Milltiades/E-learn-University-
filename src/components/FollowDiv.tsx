@@ -63,7 +63,7 @@ const Error = styled.p<any>`
 
 const Button = styled.button`
      width: 100%;
-  background: #1bc8c8;
+  background: linear-gradient(90deg, #276EF1 0%, #1BC8C8 100%);
   border-radius: 32px;
   border: none;
   display: flex;
