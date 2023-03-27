@@ -78,6 +78,9 @@ const Button = styled.button`
   padding: 20px 0;
   margin-top: 16px;
   height: 60px;
+  &:hover {
+    background: linear-gradient(90deg, #1350C2 0%, #159595 100%);
+  }
 @media (min-width: 767px) {
   height: 62px;
   font-size: 16px;
