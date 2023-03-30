@@ -16,7 +16,7 @@ export default function AccordeonDiv() {
         <Accordeon>
       {data.map((item, index) => {
         return (
-          <ContentItem
+          <ContentItem height={index !== clicked ? "100px" : "auto"}
           onClick={() => handleClick(index)}
           key={index}>
             <ItemHead>
@@ -124,7 +124,7 @@ const MainDiv = styled.div`
   
 `;
 
-const ContentItem = styled.button`
+const ContentItem = styled.button<any>`
   width: 100%;
   min-height: 100px;
   display: flex;
@@ -142,6 +142,7 @@ const ContentItem = styled.button`
   }
   @media (min-width: 1200px) {
     width: 49.35%;
+    height: ${(props) => props.height};
   }
 `;
 const ItemHead = styled.div`
