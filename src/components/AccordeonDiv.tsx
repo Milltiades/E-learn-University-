@@ -16,10 +16,12 @@ export default function AccordeonDiv() {
         <Accordeon>
       {data.map((item, index) => {
         return (
-          <ContentItem key={index}>
+          <ContentItem
+          onClick={() => handleClick(index)}
+          key={index}>
             <ItemHead>
               <H4>{data[index].question}</H4>
-              <Button onClick={() => handleClick(index)}>
+              <Button >
                 {clicked === index ? (
                   <Img src="/assets/minus.svg" alt="" />
                 ) : (
@@ -31,6 +33,7 @@ export default function AccordeonDiv() {
             {data[index].answer}
             </P>
           </ContentItem>
+          
         );
       })}
       </Accordeon>
@@ -121,7 +124,7 @@ const MainDiv = styled.div`
   
 `;
 
-const ContentItem = styled.div`
+const ContentItem = styled.button`
   width: 100%;
   min-height: 100px;
   display: flex;
@@ -130,6 +133,8 @@ const ContentItem = styled.div`
   padding: 24px 20px;
   align-items: center;
   justify-content: center;
+  background: transparent;
+  text-align: left;
   @media (min-width: 767px) {
     min-height: 128px;
     margin-bottom: 16px;
